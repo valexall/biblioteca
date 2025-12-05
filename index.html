@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Bibliotecario - Módulo Devoluciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Devolución de Libros</h1>
+        </header>
+
+        <main class="card">
+            <form id="formDevolucion">
+                <div class="form-group">
+                    <label>Nombre del Socio:</label>
+                    <input type="text" id="socio" value="Juan Perez" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label>Libro Prestado:</label>
+                    <input type="text" id="libro" value="Ingeniería de Software I" readonly>
+                </div>
+
+                <div class="row">
+                    <div class="form-group">
+                        <label>Fecha Vencimiento (Pactada):</label>
+                        <input type="date" id="fechaVencimiento" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Fecha Devolución (Hoy):</label>
+                        <input type="date" id="fechaActual" required>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="checkDeteriorado">
+                    <label for="checkDeteriorado" class="danger-text">¿El libro está deteriorado?</label>
+                </div>
+
+                <button type="button" onclick="registrarDevolucion()">Registrar Devolución</button>
+            </form>
+
+            <div id="resultado" class="resultado-box hidden">
+                <h3>Resumen de la Operación</h3>
+                <p id="msgEstadoLibro"></p>
+                <p id="msgSancion"></p>
+                <div id="alertaSancion" class="alerta hidden">
+                    <strong>⚠️ SANCIÓN APLICADA:</strong> El socio ha sido suspendido por 15 días.<br>
+                    Fecha fin de castigo: <span id="fechaFinCastigo"></span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,1 +1,2 @@
 Esta es una nota en develop
+Esta es una nota en feature/logica

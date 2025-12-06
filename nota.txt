@@ -1,1 +1,2 @@
 Este es un cambio en la nota de feature/logica
+ESTA ES UNA NOTA EN FEATURE/DISEÑO
